@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eunice Cho</title>
-<meta name="description" content="Eunice Cho is a high school senior in Fort Lee, New Jersey. She studies where health risk concentrates and builds tools that reach people before a crisis does: a published geospatial study of supervised consumption sites and a drug-education app on the App Store.">
+<meta name="description" content="Eunice Cho is a high school senior in Fort Lee, New Jersey. She studies where health risk concentrates and builds tools that reach people before a crisis does: a geospatial study of supervised consumption sites, a drug-education app, and prevention work with The Center for Alcohol and Drug Resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,6 +29,7 @@
   h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-0.01em}
   h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:.35em}
   h3{font-size:1.35rem;font-weight:600;margin-bottom:.25em}
+  h4{font-family:"Public Sans",sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);margin:2.2rem 0 .8rem}
   p{margin:0 0 1em}
   a{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(31,74,51,.35)}
   a:hover{border-bottom-color:var(--green)}
@@ -42,10 +43,11 @@
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
   .brand{font-family:"Newsreader",Georgia,serif;font-size:1.2rem;font-weight:600;color:var(--ink);border:0;display:flex;align-items:center;gap:.6rem;white-space:nowrap;flex-shrink:0}
   .brand span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-size:.8rem;font-family:"Public Sans",sans-serif;font-weight:700;letter-spacing:.04em}
-  .links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
   .links::-webkit-scrollbar{display:none}
-  .links a{border:0;font-size:.86rem;font-weight:600;color:var(--muted);padding:8px 10px;border-radius:6px;white-space:nowrap}
+  .links a{border:0;font-size:.84rem;font-weight:600;color:var(--muted);padding:8px 9px;border-radius:6px;white-space:nowrap}
   .links a:hover{color:var(--ink);background:rgba(31,74,51,.07)}
+  .links a.page{color:var(--green);background:rgba(201,138,27,.14)}
 
   /* hero */
   .hero{padding:72px 0 56px}
@@ -58,7 +60,7 @@
   .btn.solid{background:var(--green);color:#fff}
   .btn:hover{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
   .portrait .frame{position:relative}
-  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%;border-radius:4px;display:block;position:relative;z-index:1}
+  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:72% 40%;border-radius:4px;display:block;position:relative;z-index:1}
   .portrait .frame::after{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--amber-soft);border-radius:4px;z-index:0}
   .portrait figcaption{font-size:.82rem;color:var(--muted);margin-top:2rem;position:relative;z-index:1}
 
@@ -83,28 +85,44 @@
   .entry:first-of-type{border-top:0;padding-top:0}
   .entry .when{font-size:.82rem;font-weight:600;color:var(--moss);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.3rem}
   .entry p:last-child{margin-bottom:0}
-  .entry .cover{float:right;width:96px;margin:0 0 .6rem 1.2rem;border-radius:3px;box-shadow:0 6px 16px rgba(23,38,29,.18)}
-  .entry::after{content:"";display:block;clear:both}
+  figure.book{max-width:340px;justify-self:center}
+  figure.book img{box-shadow:0 14px 34px rgba(23,38,29,.18)}
   .facts{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.55rem}
   .facts li{padding-left:1.3rem;position:relative}
   .facts li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--amber)}
   .pull{border-left:3px solid var(--amber);padding:.2rem 0 .2rem 1.1rem;font-family:"Newsreader",Georgia,serif;font-size:1.25rem;line-height:1.45;color:var(--ink);margin:1.4rem 0}
-  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:1.4rem}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:1.2rem}
+  .gallery.two-up{grid-template-columns:1fr 1fr}
+  .gallery.four{grid-template-columns:repeat(4,1fr)}
+  .gallery img{aspect-ratio:4/3;object-fit:cover}
+  .gallery.tall img{aspect-ratio:3/4}
+  .gallery.contain img{object-fit:contain;background:#fff;border:1px solid var(--line);box-shadow:none}
   .app{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--green);color:#f2f5f0;border-radius:6px;padding:26px;margin-top:1.4rem}
   .app img{width:150px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.35)}
   .app h3{color:#fff}
   .app p{color:#d9e3d9;margin-bottom:.6rem}
   .app a{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+  .app .applinks{display:flex;gap:18px;flex-wrap:wrap}
+  .note{background:var(--amber-soft);border-radius:6px;padding:20px 22px;margin-top:1.6rem}
+  .note h3{font-size:1.15rem}
+  .note p:last-child{margin-bottom:0}
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:1rem}
+  .timeline .year{font-family:"Newsreader",Georgia,serif;font-size:1.6rem;color:var(--green);margin-bottom:.4rem}
+  .timeline img{aspect-ratio:4/5;object-fit:cover}
+  .callout{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  .callout img{aspect-ratio:4/3;object-fit:cover}
 
   /* honors */
-  .honors ul{columns:2;column-gap:40px;padding-left:1.2rem;margin:0 0 2rem}
+  .honors ul{columns:2;column-gap:40px;padding-left:1.2rem;margin:0 0 1rem}
   .honors li{break-inside:avoid;margin-bottom:.5rem}
-  .certs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .certs img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border:1px solid var(--line);border-radius:3px;box-shadow:none;background:#fff}
-  .certs figcaption{font-size:.78rem}
+  .certs{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .certs a{border:0;display:block}
+  .certs img{width:100%;aspect-ratio:4/3;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:3px;box-shadow:none;background:#fff;transition:transform .15s}
+  .certs a:hover img{transform:translateY(-2px);border-color:var(--moss)}
+  .certs figcaption{font-size:.76rem;margin-top:.45rem}
 
   /* contact */
-  .contact dl{display:grid;grid-template-columns:140px 1fr;gap:.6rem 1.5rem;margin:0}
+  .contact dl{display:grid;grid-template-columns:170px 1fr;gap:.6rem 1.5rem;margin:0}
   .contact dt{font-weight:700;color:var(--ink)}
   .contact dd{margin:0}
   footer{padding:34px 0;font-size:.84rem;color:var(--muted)}
@@ -116,14 +134,18 @@
     .stats .wrap{grid-template-columns:1fr 1fr}
     .stat{border-right:0;border-bottom:1px solid var(--line);padding-left:0}
     .stat:nth-child(odd){padding-right:22px}
-    .two{grid-template-columns:1fr}
+    .two,.callout{grid-template-columns:1fr}
     .two.rev > figure{order:0}
+    .gallery,.gallery.four,.timeline{grid-template-columns:1fr 1fr}
     .honors ul{columns:1}
     .certs{grid-template-columns:1fr 1fr}
     .app{grid-template-columns:1fr}
     .app img{width:130px}
     .contact dl{grid-template-columns:1fr}
     section{padding:56px 0}
+  }
+  @media (max-width:520px){
+    .gallery,.gallery.four,.timeline{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -136,6 +158,7 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#safesteps">SafeSteps</a>
+      <a class="page" href="internship.html">Internship</a>
       <a href="#teaching">Teaching</a>
       <a href="#leadership">Leadership</a>
       <a href="#art">Art &amp; writing</a>
@@ -151,15 +174,15 @@
       <div class="kicker">Fort Lee, New Jersey · Class of 2027</div>
       <h1>Eunice Cho</h1>
       <p class="lede">I study where health risk concentrates and why, and I build the tools that reach people before a crisis does.</p>
-      <p class="detail">Senior at Fort Lee High School. Co-author of a geospatial study of supervised consumption sites, accepted for publication in NHSJS Reports. Creator of SafeSteps For All, a drug-education app on the App Store. Applying to study public health and epidemiology.</p>
+      <p class="detail">Senior at Fort Lee High School. Co-author of a geospatial study of supervised consumption sites, accepted for publication in NHSJS Reports. Creator of SafeSteps For All, a drug-education app on the App Store, and an intern at The Center for Alcohol and Drug Resources. Applying to study the health sciences.</p>
       <div class="btns">
         <a class="btn solid" href="#research">Read about the research</a>
-        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" href="internship.html">See my internship</a>
       </div>
     </div>
     <figure class="portrait">
-      <div class="frame"><img src="assets/hero.jpg" alt="Eunice Cho standing beside her paintings at an art exhibition"></div>
-      <figcaption>At the United Asian American Alliance AAPI Heritage Month exhibition, where my work has been shown three years in a row.</figcaption>
+      <div class="frame"><img src="assets/tcadr-action-plan.jpg" alt="Eunice Cho presenting an action plan on stage at the Seeds of Change Youth Leadership Conference"></div>
+      <figcaption>Presenting our NJ4S action plan at the 2026 Seeds of Change Youth Leadership Conference, Ramapo College of New Jersey.</figcaption>
     </figure>
   </div>
 </header>
@@ -167,9 +190,9 @@
 <div class="stats">
   <div class="wrap">
     <div class="stat"><b>1 paper</b><small>accepted for publication, NHSJS Reports, 2026</small></div>
-    <div class="stat"><b>1 app</b><small>SafeSteps For All, live on the App Store</small></div>
+    <div class="stat"><b>70+ students</b><small>reached through SafeSteps workshops at New Jersey libraries</small></div>
     <div class="stat"><b>Gold Key</b><small>Scholastic Art &amp; Writing Awards, Drawing &amp; Illustration, 2025</small></div>
-    <div class="stat"><b>370+ hours</b><small>documented service: tutoring, teaching, borough events</small></div>
+    <div class="stat"><b>500+ hours</b><small>documented service: tutoring, teaching, community and clinical settings</small></div>
   </div>
 </div>
 
@@ -178,199 +201,280 @@
     <div>
       <div class="eyebrow">01 · About</div>
       <h2>Two questions I keep coming back to</h2>
-      <p>The first is why harm from drugs lands so unevenly on some neighborhoods and not others. The second is what a high school student can actually do about it. For the last two years I have worked on both at once: a research project that measures what happens around supervised consumption sites in New York City, and an app that teaches teenagers how addiction works before anyone has to learn it the hard way.</p>
-      <p>I grew up in Fort Lee, in a Korean-American family, and most of what I do outside of class involves other people’s kids: teaching Korean to four-year-olds on weekend mornings, tutoring elementary students in math and reading, and running events for the borough’s Youth Council. I also paint and write, and some of that work has found its way into galleries and the Scholastic Awards.</p>
-      <p>I plan to study public health, with epidemiology as the method and community health education as the point.</p>
+      <p>The first is why harm from drugs lands so unevenly on some neighborhoods and not others. The second is what a high school student can actually do about it. For the last two years I have worked on both at once: a research project that measures what happens around supervised consumption sites in New York City, an app and library workshop that teach younger students how addiction works before anyone has to learn it the hard way, and an internship with a county prevention agency.</p>
+      <p>I grew up in Fort Lee, in a Korean-American family, and most of what I do outside of class involves other people: teaching Korean to young children and to non-Korean adults at my church, tutoring elementary students in math and English, and helping run events for the borough’s Youth Council. I also paint and write, and some of that work has found its way into galleries and the Scholastic Awards.</p>
+      <p>I plan to study the health sciences, with the same goal that runs through my research and my app: reaching people before a crisis does.</p>
     </div>
     <div>
       <div class="pull">“Education is the best form of prevention.” That line is in the first screen of my app, and it is the shortest version of what I believe.</div>
       <ul class="facts">
         <li>Fort Lee High School, Class of 2027; first decile; Science Research Honors for three years</li>
-        <li>Columbia University Science Honors Program, 2024 to 2025: Immunology, Human Physiology, and Social Science Research Techniques for STEM Projects</li>
-        <li>Coursework includes AP Biology, AP Chemistry, AP Statistics, AP Environmental Science, AP World History, AP US History, IB English HL, and IB Mathematics HL</li>
-        <li>SAT 1520</li>
+        <li>Columbia University Science Honors Program, 2024 to present: Immunology, Human Physiology, Social Science Research Techniques, Science of Discovery, and Bioengineering and Biomimetic Design, with projects ranging from MRI analysis to AlphaFold protein modeling and mock surveys</li>
+        <li>Coursework includes AP Biology, AP Chemistry, AP Calculus BC, AP Statistics, AP Environmental Science, AP World History, AP US History, IB English HL, and IB Mathematics HL</li>
+        <li>SAT 1550 (superscore)</li>
+        <li>National Honor Society, 2025 to present</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section id="research">
-  <div class="wrap two rev">
-    <figure>
-      <img src="assets/poster.jpg" alt="Eunice Cho and her co-author beside their research poster at the Terra North Jersey STEM Fair">
-      <figcaption>Presenting “Beyond the Facility Walls” with my co-author at the Terra North Jersey STEM Fair, Kean University, March 2026.</figcaption>
-    </figure>
-    <div>
-      <div class="eyebrow">02 · Research</div>
-      <h2>Beyond the facility walls</h2>
-      <p>In 2021 New York City opened the first supervised consumption sites in the United States. The debate about them is usually about what happens inside: overdoses reversed, referrals made. I wanted to know what happens outside, on the blocks around them, because that is where neighbors form their opinions and where the political fight is actually won or lost.</p>
-      <p>Working under a faculty biostatistician at Johns Hopkins University as a research intern since July 2025, my co-author and I used two public signals as proxies for visible public drug use: 311 syringe complaints and EMS drug-related calls. We compared the months before and after the sites opened, close to the sites and farther away.</p>
-      <ul class="facts">
-        <li>Methods: Moran’s I spatial clustering, a difference-in-differences comparison, and logistic regression, all in R</li>
-        <li>Finding: zip codes close to the sites saw about a 3 percent larger reduction in EMS drug calls and a 35 percent larger reduction in syringe complaints than zip codes farther away</li>
-        <li>I wrote the literature review, the study rationale, and the abstract, and worked with my co-author on the analysis and on the revision the reviewers accepted</li>
-        <li>Manuscript accepted for publication in <em>NHSJS Reports</em> after peer review (2026); presented at the Terra North Jersey STEM Fair, March 21 to 22, 2026</li>
-      </ul>
-      <p style="margin-top:1rem">A second project, with a team for the Toshiba/NSTA ExploraVision competition, proposed a non-invasive screening tool for liver cirrhosis and earned an Honorable Mention in 2026.</p>
+  <div class="wrap">
+    <div class="two rev">
+      <figure>
+        <img src="assets/poster.jpg" alt="Eunice Cho and her co-author beside their research poster at the Terra North Jersey STEM Fair">
+        <figcaption>Presenting “Beyond the Facility Walls” with my co-author at the Terra North Jersey STEM Fair, Kean University, March 2026.</figcaption>
+      </figure>
+      <div>
+        <div class="eyebrow">02 · Research</div>
+        <h2>Beyond the facility walls</h2>
+        <p>In 2021 New York City opened the first supervised consumption sites in the United States, in East Harlem and Washington Heights. The debate about them is usually about what happens inside: overdoses reversed, referrals made. I wanted to know what happens outside, on the blocks around them, because that is where neighbors form their opinions and where the political fight is actually won or lost.</p>
+        <p>Mentored since July 2025 by Brian Hyunsoo Song, a biostatistician at Johns Hopkins University, my co-author and I used two public signals as proxies for visible public drug use: 311 syringe complaints and EMS drug-related calls. We compared the months before and after the sites opened, close to the sites and farther away.</p>
+        <ul class="facts">
+          <li>Methods: Moran’s I spatial clustering, a difference-in-differences comparison, and logistic regression, all in R</li>
+          <li>Finding: zip codes close to the sites saw about a 3 percent larger reduction in EMS drug calls and a 35 percent larger reduction in syringe complaints than zip codes farther away</li>
+          <li>I wrote the literature review, the study rationale, and the abstract, and worked with my co-author on the analysis and on the revision the reviewers accepted</li>
+          <li>Manuscript accepted for publication in <em>NHSJS Reports</em> after peer review (2026); presented at the Terra North Jersey STEM Fair, March 21 to 22, 2026</li>
+        </ul>
+      </div>
+    </div>
+    <h4>Science competitions</h4>
+    <p>For the 2026 Toshiba/NSTA ExploraVision competition, my team proposed CirrhoScan Pro, a needle-free way to screen for liver cirrhosis, and earned an Honorable Mention. In the New Jersey Science League I placed first in High School Environmental Science in 2026, and at the New Jersey Chemistry Olympics at NJIT our team took third place in Event 7, Microscale Lab. I also make topic study slides for our school’s Science League team and help teammates prepare for Chemistry Olympics events; the number of students taking the league tests grew from 15 to 30.</p>
+    <div class="gallery contain">
+      <figure><img src="assets/cert-exploravision.jpg" alt="Toshiba and NSTA ExploraVision Honorable Mention Certificate of Merit, 2026"><figcaption>ExploraVision Honorable Mention, Certificate of Merit, 2026.</figcaption></figure>
+      <figure><img src="assets/chem-olympics.jpg" alt="Eunice Cho and teammates on stage receiving the third place award at the New Jersey Chemistry Olympics"><figcaption>Third place, Event 7 Microscale Lab, New Jersey Chemistry Olympics, May 2026.</figcaption></figure>
+      <figure><img src="assets/njsl-plaque.jpg" alt="New Jersey Science League first place plaque, High School Environmental Science 2026"><figcaption>New Jersey Science League, 1st Place, HS Environmental Science, 2026.</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="safesteps">
-  <div class="wrap two">
-    <div>
-      <div class="eyebrow">03 · SafeSteps For All</div>
-      <h2>An app for the conversation nobody wants to have</h2>
-      <p>Most drug education I had seen was either a scare poster or a pamphlet. Neither explains the part that actually matters to a teenager: how tolerance builds, why withdrawal feels the way it does, and how a pill from a friend can turn into fentanyl. So in January 2026 I built SafeSteps For All, an evidence-based drug-education app, and published it on the Apple App Store.</p>
-      <p>The app walks through drug categories, street names, short- and long-term effects, and the mechanics of addiction, with quizzes so the information sticks. In April 2026 I launched a companion workshop at the public library that teaches students to weigh consequences the way the app does.</p>
-      <ul class="facts">
-        <li>Presented the program to community audiences with The Center for Alcohol and Drug Resources (TCADR), a county prevention agency in Fair Lawn</li>
-        <li>Designing the program for TCADR’s 2026 Seeds of Change Youth Conference at Ramapo College, October 23, 2026</li>
-      </ul>
-      <div class="app">
-        <img src="assets/app-store.jpg" alt="SafeSteps For All on the App Store">
-        <div>
-          <h3>SafeSteps For All</h3>
-          <p>Education category · free · ages 13 and up · “Knowledge is Protection”</p>
-          <a href="https://apps.apple.com/us/app/safesteps-for-all/id6758502996">Open on the App Store</a>
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <div class="eyebrow">03 · SafeSteps For All</div>
+        <h2>An app for the conversation nobody wants to have</h2>
+        <p>Most drug education I had seen was either a scare poster or a pamphlet. Neither explains the part that actually matters to a young student: how tolerance builds, why withdrawal feels the way it does, and how a pill from a friend can turn out to be fentanyl. In January 2026 I built SafeSteps For All, an evidence-based drug-education app, and published it on the Apple App Store. I had no coding background, so I taught myself from video tutorials, tried platform after platform, and worked through the App Store upload problems by asking questions in developer forums and Discord servers.</p>
+        <p>The app walks through drug categories, street names, short- and long-term effects, and the mechanics of addiction, with quizzes so the information sticks. I did not want it to stay on a screen, so I turned it into a 45-minute interactive workshop for grades 4 to 7 and took it to public libraries, including Leonia Public Library and Palisades Park Public Library in June 2026. More than 70 students have taken part so far.</p>
+        <div class="app">
+          <img src="assets/app-store.jpg" alt="SafeSteps For All on the App Store">
+          <div>
+            <h3>SafeSteps For All</h3>
+            <p>Education category · free · ages 13 and up · “Knowledge is Protection”</p>
+            <div class="applinks">
+              <a href="https://apps.apple.com/us/app/safesteps-for-all/id6758502996">Open on the App Store</a>
+              <a href="https://canva.link/safestepsforall">Workshop slides</a>
+              <a href="https://drive.google.com/file/d/1NkqS2paJLrzMpYfZCu51obLLIG6JUcxs/view?usp=sharing">Video walkthrough of the app</a>
+            </div>
+          </div>
         </div>
       </div>
+      <figure>
+        <img src="assets/safesteps-talk.jpg" alt="Eunice Cho presenting SafeSteps For All to an audience">
+        <figcaption>Presenting SafeSteps For All: “learn how to stay safe and make smart choices.”</figcaption>
+      </figure>
     </div>
-    <figure>
-      <img src="assets/safesteps-talk.jpg" alt="Eunice Cho presenting SafeSteps For All to a community audience">
-      <figcaption>Presenting “SafeSteps for All: learn how to stay safe and make smart choices” at a community session hosted with TCADR.</figcaption>
-    </figure>
+    <div class="gallery tall">
+      <figure><img src="assets/safesteps-poster-leonia.jpg" alt="SafeSteps For All workshop poster for Leonia Public Library"><figcaption>The poster I made for the Leonia Public Library workshop.</figcaption></figure>
+      <figure><img src="assets/safesteps-poster-pp.jpg" alt="SafeSteps For All workshop poster for Palisades Park Public Library"><figcaption>The same workshop, advertised at Palisades Park Public Library.</figcaption></figure>
+      <figure><img src="assets/safesteps-bulletin.jpg" alt="Palisades Park Public Library June 2026 children’s program bulletin listing SafeSteps for All"><figcaption>SafeSteps for All in the Palisades Park Public Library’s June 2026 children’s program bulletin.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="internship">
+  <div class="wrap callout">
+    <figure><img src="assets/tcadr-cape.jpg" alt="Eunice Cho and two others holding a red Cape of Pledge at the Seeds of Change Youth Leadership Conference" style="aspect-ratio:4/5;object-position:center 30%"></figure>
+    <div>
+      <div class="eyebrow">04 · Internship</div>
+      <h2>The Center for Alcohol and Drug Resources</h2>
+      <p>After many emails and an interview, I became an intern at The Center for Alcohol and Drug Resources, a prevention agency in Fair Lawn run by Children’s Aid and Family Services. I serve on the steering committee of the Seeds of Change Youth Leadership Conference, designed the theme and flyer for the 2026 conference, came up with the Red Ribbon Week Cape of Pledge, and staffed prevention booths on National Overdose Awareness Day.</p>
+      <div class="btns"><a class="btn solid" href="internship.html">See the internship page</a></div>
+    </div>
   </div>
 </section>
 
 <section id="teaching">
-  <div class="wrap two rev">
-    <figure>
-      <img src="assets/korean-school.jpg" alt="Eunice Cho teaching Korean to young children at a classroom table">
-      <figcaption>At New York Evergreen Korean School, where I teach Pre-K through first grade.</figcaption>
-    </figure>
-    <div>
-      <div class="eyebrow">04 · Teaching and community</div>
-      <h2>Where I learned to explain things</h2>
-      <div class="entry">
-        <div class="when">Sept 2024 to present</div>
-        <h3>Teacher and lead of assistant teaching staff, New York Evergreen Korean School</h3>
-        <p>I teach Korean language and culture to Pre-K through first grade, including children with no Korean heritage at all. In my second year I was asked to lead the assistant teachers: setting lesson expectations, training new staff, and covering classrooms when someone is out.</p>
+  <div class="wrap">
+    <div class="two rev">
+      <figure>
+        <img src="assets/korean-school.jpg" alt="Eunice Cho teaching Korean to young children at a classroom table">
+        <figcaption>At New York Evergreen Korean School, where I teach Pre-K through first grade.</figcaption>
+      </figure>
+      <div>
+        <div class="eyebrow">05 · Teaching and community</div>
+        <h2>Where I learned to explain things</h2>
+        <div class="entry">
+          <div class="when">Sept 2024 to present</div>
+          <h3>Teacher and lead of assistant teaching staff, New York Evergreen Korean School</h3>
+          <p>I teach Korean language and culture to Pre-K through first grade, including children with no Korean heritage at all. In my second year I was asked to lead the assistant teachers: setting lesson expectations, training new staff, and covering classrooms when someone is out. I also teach a Korean class for non-Korean adults at our church, to bridge the language gap with our older congregation, which is predominantly Korean.</p>
+        </div>
+        <div class="entry">
+          <div class="when">Sept 2023 to Dec 2024 · 130+ hours</div>
+          <h3>Reading Buddy tutor, KPAC</h3>
+          <p>Math and English tutoring for grades K to 6, many of them learning English at school and Korean at home at the same time. I learned to teach the same idea three different ways.</p>
+        </div>
+        <div class="entry">
+          <div class="when">July 2024 to present</div>
+          <h3>Mentor and tutor, Walk Alongside</h3>
+          <p>Free tutoring and mentorship for students whose families cannot afford private academic help. I contribute to the shared resource library in reading comprehension, vocabulary, writing, math practice, and study habits.</p>
+        </div>
+        <div class="entry">
+          <div class="when">Sept 2023 to present · 200+ hours</div>
+          <h3>Youth Council of Fort Lee</h3>
+          <p>My longest-running commitment: hosting and staffing borough events, including the annual Color Run, for three years. Recognized by Mayor Mark J. Sokolich and the Borough Council in 2025.</p>
+        </div>
       </div>
-      <div class="entry">
-        <div class="when">Sept 2023 to Dec 2024 · 130+ hours</div>
-        <h3>Reading Buddy tutor, KPAC</h3>
-        <p>Math and English tutoring for grades K to 6, many of them learning English at school and Korean at home at the same time. I learned to teach the same idea three different ways.</p>
-      </div>
-      <div class="entry">
-        <div class="when">July 2024 to present</div>
-        <h3>Mentor and tutor, Walk Alongside</h3>
-        <p>Free tutoring and mentorship for students whose families cannot afford private academic help. I contribute to the shared resource library in reading comprehension, vocabulary, writing, math practice, and study habits.</p>
-      </div>
-      <div class="entry">
-        <div class="when">Sept 2023 to present · 200+ hours</div>
-        <h3>Youth Council of Fort Lee</h3>
-        <p>My longest-running commitment: hosting and staffing borough events for three years. Recognized by Mayor Mark J. Sokolich and the Borough Council in 2025.</p>
-      </div>
+    </div>
+    <div class="gallery">
+      <figure><img src="assets/ks-songpyeon.jpg" alt="Eunice Cho making songpyeon rice cakes with young students"><figcaption>Making songpyeon for Chuseok, Korean Thanksgiving, with my Korean school class.</figcaption></figure>
+      <figure><img src="assets/ks-keychain.jpg" alt="A young student holding a clay name keychain spelled in Korean" style="object-position:center 35%"><figcaption>A student’s name keychain, spelled in Korean in clay.</figcaption></figure>
+      <figure><img src="assets/ks-adults.jpg" alt="Eunice Cho teaching a Korean class for non-Korean adults at church"><figcaption>Teaching Korean to non-Korean adults at church.</figcaption></figure>
+    </div>
+    <div class="gallery two-up">
+      <figure><img src="assets/yc-group.jpg" alt="Youth Council of Fort Lee members together on stage at the annual Color Run"><figcaption>Youth Council members at the annual Color Run.</figcaption></figure>
+      <figure><img src="assets/yc-colorrun.jpg" alt="Eunice Cho and two friends covered in color powder at the Youth Council Color Run" style="object-position:center 30%"><figcaption>After the Color Run.</figcaption></figure>
+    </div>
+    <div class="note">
+      <h3>500+ hours of documented service</h3>
+      <p>Tutoring math and English for elementary students; teaching Korean at New York Evergreen Korean School to elementary students and to non-Korean adults; borough and community events with the Youth Council of Fort Lee, The Center for Alcohol and Drug Resources, and Korean community events; shadowing at Park Orthodontics; an internship at Center Pharmacy; and volunteering at New Bridge Medical Center.</p>
     </div>
   </div>
 </section>
 
 <section id="leadership">
-  <div class="wrap two">
-    <div>
-      <div class="eyebrow">05 · Leadership</div>
-      <h2>Organizations I help run</h2>
-      <div class="entry">
-        <div class="when">July 2025 to present</div>
-        <h3>Campaign organizing team leader, VOY (Voices of the Young)</h3>
-        <p>VOY is a student-run youth mental health organization. I led campaign organizing for the April 23, 2026 launch of <a href="https://mo-soop.glide.page">Mo Soop</a> (모숲, “Everyone’s Bamboo Forest”), an anonymous peer-support platform, and ran the Finals Relief Project: 150 student-designed, 3D-printed stress-relief clickers delivered to Fort Lee High School during finals, each with a card pointing to Mo Soop and mental health resources. I also support the development of <a href="https://mo-ri.glide.page">Mo Ri</a>, a companion app for high schoolers with ADHD.</p>
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <div class="eyebrow">06 · Leadership</div>
+        <h2>Organizations I help run</h2>
+        <div class="entry">
+          <div class="when">July 2025 to present</div>
+          <h3>Campaign organizing team leader, VOY (Voices of the Young)</h3>
+          <p>VOY is a student-run youth mental health organization. I led campaign organizing for the April 23, 2026 launch of <a href="https://mo-soop.glide.page">Mo Soop</a> (모숲, “Everyone’s Bamboo Forest”), an anonymous peer-support platform, and ran the Finals Relief Project: 150 student-designed, 3D-printed stress-relief clickers delivered to Fort Lee High School during finals, each with a card pointing to Mo Soop and mental health resources. I also supported the development of <a href="https://mo-ri.glide.page">Mo Ri</a>, a companion app for high schoolers with ADHD, which launched in October 2026.</p>
+        </div>
+        <div class="entry">
+          <div class="when">July 2025 to present</div>
+          <h3>Leading liaison, CDHW (Clothing Donations to Help Kids in the World)</h3>
+          <p>CDHW delivers brand-new clothing, sourced directly from apparel companies, to pediatric patients and families in medical hardship. In 2025 I coordinated the collection and distribution of more than $15,000 in clothing and built hospital partnerships across New Jersey, including Hackensack University Medical Center.</p>
+        </div>
+        <div class="entry">
+          <div class="when">July 2025 to July 2026</div>
+          <h3>Chapter president, Accessible Science, Fort Lee High School</h3>
+          <p>Accessible Science is a multi-chapter student organization that publishes science writing for non-scientists. I led the Fort Lee chapter and helped publish the <a href="https://a.co/d/05Hk9cwB"><em>Accessible Science Student Anthology</em></a>, a collection of more than 100 student-written articles for children and teens, now sold on Amazon.</p>
+        </div>
+        <div class="entry">
+          <div class="when">July 2025 to present</div>
+          <h3>Marketing team leader, YGLE (Young Global Leaders of the East)</h3>
+          <p>Directed outreach for the Second Annual Global Leadership Forum (2025) and a three-part youth leadership workshop series, and channeled member volunteers into partner projects, including CDHW deliveries and Korean Heritage Night with the New York Mets.</p>
+        </div>
       </div>
-      <div class="entry">
-        <div class="when">July 2025 to present</div>
-        <h3>Leading liaison, CDHW (Clothing Donations to Help Kids in the World)</h3>
-        <p>CDHW delivers brand-new clothing, sourced directly from apparel companies, to pediatric patients and families in medical hardship. In 2025 I coordinated the collection and distribution of more than $15,000 in clothing and built hospital partnerships across New Jersey, including Hackensack University Medical Center.</p>
-      </div>
-      <div class="entry">
-        <img class="cover" src="assets/anthology.jpg" alt="Cover of the Accessible Science Student Anthology">
-        <div class="when">July 2025 to July 2026</div>
-        <h3>Chapter president, Accessible Science, Fort Lee High School</h3>
-        <p>Accessible Science is a multi-chapter student organization that publishes science writing for non-scientists. I led the Fort Lee chapter and helped publish the <a href="https://a.co/d/05Hk9cwB"><em>Accessible Science Student Anthology</em></a>, a collection of more than 100 student-written articles for children and teens, now sold on Amazon.</p>
-      </div>
-      <div class="entry">
-        <div class="when">July 2025 to present</div>
-        <h3>Marketing team leader, YGLE (Young Global Leaders of the East)</h3>
-        <p>Directed outreach for the Second Annual Global Leadership Forum (2025) and a three-part youth leadership workshop series, and channeled member volunteers into partner projects, including CDHW deliveries and Korean Heritage Night with the New York Mets.</p>
-      </div>
-      <div class="entry">
-        <div class="when">Dec 2025 to present</div>
-        <h3>Fellowship leader and event coordinator, Gideon Youth Group</h3>
-        <p>Production and logistics for weekly gatherings and special events at New York Evergreen Presbyterian Church. I am also a member of the LiNK North Jersey Rescue Team, which raises awareness and funds for North Korean refugees.</p>
-      </div>
+      <figure class="book">
+        <img src="assets/anthology.jpg" alt="Cover of the Accessible Science Student Anthology">
+        <figcaption>The <em>Accessible Science Student Anthology</em>, which our chapter helped write and publish: more than 100 student-written articles for children and teens.</figcaption>
+      </figure>
     </div>
-    <figure>
-      <img src="assets/youth-council.jpg" alt="Eunice Cho with fellow Youth Council members and borough officials at a Fort Lee event">
-      <figcaption>With Youth Council members and borough officials at a Fort Lee event.</figcaption>
-    </figure>
+    <div class="entry" style="border-top:1px solid var(--line);margin-top:22px">
+      <div class="when">Nov 2025 to present</div>
+      <h3>Fellowship leader and event coordinator, Gideon Youth Group, New York Evergreen Presbyterian Church</h3>
+      <p>I organize the youth group’s events, retreats, and outreach, and I prepare the financial reports that go to our pastors and teachers. I am also a member of the LiNK North Jersey Rescue Team, which raises awareness and funds for North Korean refugees.</p>
+    </div>
+    <div class="gallery four">
+      <figure><img src="assets/gideon-cert.jpg" alt="Certificate of Appointment naming Eunice Cho Fellowship Leader and Event Coordinator for the Gideon Youth Group"><figcaption>Certificate of Appointment, November 30, 2025.</figcaption></figure>
+      <figure><img src="assets/gideon-2.jpg" alt="Gideon Youth Group members together after an event"><figcaption>From our youth group events.</figcaption></figure>
+      <figure><img src="assets/gideon-3.jpg" alt="Gideon Youth Group members gathered outdoors during a retreat"><figcaption>From our retreats and outreach.</figcaption></figure>
+      <figure><img src="assets/gideon-5.jpg" alt="Gideon Youth Group worship gathering"><figcaption>A youth gathering.</figcaption></figure>
+    </div>
   </div>
 </section>
 
 <section id="art">
   <div class="wrap">
+    <div class="eyebrow">07 · Art and writing</div>
+    <h2>The other half</h2>
     <div class="two">
       <div>
-        <div class="eyebrow">06 · Art and writing</div>
-        <h2>The other half</h2>
-        <p>I draw and paint about being Korean and American at the same time: hands, inheritance, the things passed down and the things that get lost. My drawing <em>The War In Me</em> won a Scholastic Gold Key in 2025, and my painting <em>Digital Hands, Ancestral Hearts</em> won a Silver Key in 2026. My work has been selected for the United Asian American Alliance AAPI Heritage Month exhibition three years running (2024, 2025, 2026), with citations from the New York State Assembly in 2025 and 2026, and placed second in the high school art category of the Peace Islands Institute Art and Essay Contest in 2026.</p>
-        <p>I write too. <em>Three Rolls of Kimball</em>, a personal essay, won a Silver Key in 2024, and <em>Losing Neverland: How Modern Society Consumes Childhood Wonder</em>, a critical essay, won a Silver Key in 2026. I am also a staff writer for the Fort Lee High School newspaper.</p>
+        <p>I draw and paint about being Korean and American at the same time: hands, inheritance, the things passed down and the things that get lost. My drawing <em>The War In Me</em> won a Scholastic Gold Key in 2025, and my painting <em>Digital Hands, Ancestral Hearts</em> won a Silver Key in 2026.</p>
+        <p>My work has been selected for the United Asian American Alliance AAPI Heritage Month art exhibition three years in a row, 2024 through 2026, and I received New York State Assembly citations at the 2025 and 2026 exhibitions. The exhibition has been covered by the <a href="https://www.longislandpress.com/2026/05/12/united-asian-american-alliance/">Long Island Press</a> and by <a href="https://www.youtube.com/watch?v=YlMtZTfxl8c">Korean Community Media Broadcasting TV</a>.</p>
       </div>
-      <figure>
-        <img src="assets/artist.jpg" alt="Eunice Cho beside her painting at an exhibition">
-        <figcaption>With one of my paintings at the 2026 AAPI Heritage Month exhibition.</figcaption>
-      </figure>
+      <div>
+        <p>I write too. <em>Three Rolls of Kimball</em>, a personal essay, won a Silver Key in 2024, and <em>Losing Neverland: How Modern Society Consumes Childhood Wonder</em>, a critical essay, won a Silver Key in 2026. I am also a staff writer for the Fort Lee High School newspaper.</p>
+        <p>In 2026 my art placed second in the high school art category of the Peace Islands Institute 16th Annual Art and Essay Contest, which came with a $400 cash prize.</p>
+      </div>
+    </div>
+    <h4>Three years at the AAPI Heritage Month exhibition</h4>
+    <div class="timeline">
+      <figure><div class="year">2024</div><img src="assets/aapi-2024.jpg" alt="Eunice Cho beside her paintings at the 2024 AAPI Heritage Month exhibition"><figcaption>My first year in the exhibition.</figcaption></figure>
+      <figure><div class="year">2025</div><img src="assets/aapi-2025.jpg" alt="Eunice Cho beside two of her paintings at the 2025 AAPI Heritage Month exhibition"><figcaption>Two of my paintings in the 2025 exhibition.</figcaption></figure>
+      <figure><div class="year">2026</div><img src="assets/aapi-2026b.jpg" alt="Eunice Cho talking with a visitor beside her work at the 2026 AAPI Heritage Month exhibition"><figcaption>Talking with visitors about my work in 2026.</figcaption></figure>
     </div>
     <div class="gallery">
-      <figure><img src="assets/paintings.jpg" alt="Two of Eunice Cho’s paintings on an easel at an exhibition opening"><figcaption>Two pieces on display at the 2025 exhibition opening.</figcaption></figure>
-      <figure><img src="assets/cert-peace.jpg" alt="Peace Islands Institute 16th Annual Art and Essay Contest winner certificate, 2nd place, high school art"><figcaption>Peace Islands Institute Art and Essay Contest, 2nd place, high school art category, June 2026.</figcaption></figure>
+      <figure><img src="assets/aapi-show.jpg" alt="Exhibiting artists receiving New York State Assembly recognition at the 2025 AAPI Heritage Month art exhibition"><figcaption>2025: exhibiting artists recognized by the New York State Assembly.</figcaption></figure>
+      <figure><img src="assets/aapi-ceremony-2.jpg" alt="Exhibiting artists holding their certificates at the AAPI Heritage Month exhibition ceremony"><figcaption>Exhibiting artists with their certificates at the AAPI Heritage Month ceremony.</figcaption></figure>
+      <figure><img src="assets/peace-check.jpg" alt="Eunice Cho on stage holding a $400 prize check at the Peace Islands Institute Art and Essay Contest ceremony"><figcaption>Peace Islands Institute Art and Essay Contest: 2nd place, high school art, with a $400 cash prize, 2026.</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="honors" class="honors">
   <div class="wrap">
-    <div class="eyebrow">07 · Honors</div>
+    <div class="eyebrow">08 · Honors</div>
     <h2>Recognition</h2>
     <ul>
       <li>Manuscript accepted for publication, <em>NHSJS Reports</em> (2026)</li>
+      <li>Seeds of Change Steering Committee Award, The Center for Alcohol and Drug Resources (2026)</li>
       <li>Scholastic Art &amp; Writing Awards: Gold Key, Drawing &amp; Illustration (2025); Silver Keys in Painting and Critical Essay (2026) and Personal Essay &amp; Memoir (2024); Honorable Mentions in Painting, Illustration, and Poetry</li>
-      <li>New Jersey Science League, Environmental Science: 1st place (2026)</li>
+      <li>New Jersey Science League, High School Environmental Science: 1st place (2026)</li>
       <li>New Jersey Chemistry Olympics, NJIT: 3rd place, Event 7 Microscale Lab (2026)</li>
-      <li>Toshiba/NSTA ExploraVision: Honorable Mention (2026)</li>
-      <li>Peace Islands Institute Art and Essay Contest: 2nd place, high school art (2026)</li>
+      <li>Toshiba/NSTA ExploraVision: Honorable Mention, Certificate of Merit (2026)</li>
+      <li>Peace Islands Institute Art and Essay Contest: 2nd place, high school art, $400 cash prize (2026)</li>
       <li>New York State Assembly citations, featured artist, AAPI Heritage Month exhibition (2025, 2026)</li>
       <li>Congressional Certificates of Recognition, Rep. Josh Gottheimer: Fifth District Art Showcase (2024), American Korea United Society Art Competition (2025)</li>
       <li>President’s Volunteer Service Award, Gold (2024, 2025)</li>
-      <li>Columbia University Science Honors Program (2024 to 2025)</li>
+      <li>Columbia University Science Honors Program (2024 to present)</li>
       <li>College Board National Recognition Program, School Recognition Award (2025)</li>
-      <li>National Honor Society</li>
+      <li>National Honor Society (2025 to present)</li>
     </ul>
+    <div class="gallery two-up" style="margin-bottom:2.2rem">
+      <figure><img src="assets/nhs-1.jpg" alt="Eunice Cho at the National Honor Society podium at her induction" style="object-position:center 30%"><figcaption>National Honor Society induction, 2025.</figcaption></figure>
+      <figure><img src="assets/nhs-2.jpg" alt="National Honor Society inductees seated on stage at Fort Lee High School"><figcaption>Inductees on stage at Fort Lee High School.</figcaption></figure>
+    </div>
+    <h4>Certificates (click any certificate to enlarge)</h4>
     <div class="certs">
-      <figure><img src="assets/cert-goldkey.jpg" alt="Scholastic Art and Writing Awards Gold Key certificate"><figcaption>Scholastic Gold Key, 2025</figcaption></figure>
-      <figure><img src="assets/njsl-plaque.jpg" alt="New Jersey Science League first place plaque, Environmental Science 2026"><figcaption>NJ Science League, 1st place, 2026</figcaption></figure>
-      <figure><img src="assets/cert-assembly.jpg" alt="New York State Assembly citation for featured artist"><figcaption>NY State Assembly citation, 2026</figcaption></figure>
-      <figure><img src="assets/cert-pvsa.jpg" alt="President’s Volunteer Service Award Gold certificate"><figcaption>President’s Volunteer Service Award, Gold</figcaption></figure>
+      <figure><a href="assets/cert-goldkey.jpg"><img src="assets/cert-goldkey.jpg" alt="Scholastic Gold Key certificate, The War In Me, Drawing and Illustration"></a><figcaption>Scholastic Gold Key, <em>The War In Me</em>, 2025</figcaption></figure>
+      <figure><a href="assets/cert-sk-digitalhands.jpg"><img src="assets/cert-sk-digitalhands.jpg" alt="Scholastic Silver Key certificate, Digital Hands, Ancestral Hearts, Painting"></a><figcaption>Silver Key, Painting, 2026</figcaption></figure>
+      <figure><a href="assets/cert-sk-neverland.jpg"><img src="assets/cert-sk-neverland.jpg" alt="Scholastic Silver Key certificate, Losing Neverland, Critical Essay"></a><figcaption>Silver Key, Critical Essay, 2026</figcaption></figure>
+      <figure><a href="assets/cert-sk-kimball.jpg"><img src="assets/cert-sk-kimball.jpg" alt="Scholastic Silver Key certificate, Three Rolls of Kimball, Personal Essay and Memoir"></a><figcaption>Silver Key, Personal Essay &amp; Memoir, 2024</figcaption></figure>
+      <figure><a href="assets/cert-hm-lightbulb.jpg"><img src="assets/cert-hm-lightbulb.jpg" alt="Scholastic Honorable Mention certificate, The Light Bulb in My Head, Painting"></a><figcaption>Honorable Mention, Painting, 2025</figcaption></figure>
+      <figure><a href="assets/cert-hm-zombie.jpg"><img src="assets/cert-hm-zombie.jpg" alt="Scholastic Honorable Mention certificate, A Zombie in 2024, Poetry"></a><figcaption>Honorable Mention, Poetry, 2025</figcaption></figure>
+      <figure><a href="assets/cert-hm-dust.jpg"><img src="assets/cert-hm-dust.jpg" alt="Scholastic Honorable Mention certificate, The Dust on My Windowsill, Poetry"></a><figcaption>Honorable Mention, Poetry, 2024</figcaption></figure>
+      <figure><a href="assets/njsl-plaque.jpg"><img src="assets/njsl-plaque.jpg" alt="New Jersey Science League first place plaque"></a><figcaption>NJ Science League, 1st Place, 2026</figcaption></figure>
+      <figure><a href="assets/cert-exploravision.jpg"><img src="assets/cert-exploravision.jpg" alt="ExploraVision Honorable Mention Certificate of Merit"></a><figcaption>ExploraVision Honorable Mention, 2026</figcaption></figure>
+      <figure><a href="assets/cert-tnjsf.jpg"><img src="assets/cert-tnjsf.jpg" alt="Terra North Jersey STEM Fair entry certificate"></a><figcaption>Terra North Jersey STEM Fair, 2026</figcaption></figure>
+      <figure><a href="assets/cert-peace.jpg"><img src="assets/cert-peace.jpg" alt="Peace Islands Institute Art and Essay Contest winner certificate, 2nd place"></a><figcaption>Peace Islands Institute, 2nd Place, 2026</figcaption></figure>
+      <figure><a href="assets/cert-assembly.jpg"><img src="assets/cert-assembly.jpg" alt="New York State Assembly citation, featured artist"></a><figcaption>NY State Assembly citation, 2026</figcaption></figure>
+      <figure><a href="assets/cert-uaaa.jpg"><img src="assets/cert-uaaa.jpg" alt="United Asian American Alliance Certificate of Appreciation"></a><figcaption>United Asian American Alliance, 2026</figcaption></figure>
+      <figure><a href="assets/cert-congress-2025.jpg"><img src="assets/cert-congress-2025.jpg" alt="Congressional Certificate of Recognition, 2025 American Korea United Society Art Competition"></a><figcaption>Congressional Certificate, 2025</figcaption></figure>
+      <figure><a href="assets/cert-congress-2024.jpg"><img src="assets/cert-congress-2024.jpg" alt="Congressional Certificate of Recognition, 2024 Fifth District Art Showcase"></a><figcaption>Congressional Certificate, 2024</figcaption></figure>
+      <figure><a href="assets/cert-celebratingart.jpg"><img src="assets/cert-celebratingart.jpg" alt="Celebrating Art Spring 2026 contest certificate"></a><figcaption>Celebrating Art, Spring 2026</figcaption></figure>
+      <figure><a href="assets/cert-nrp.jpg"><img src="assets/cert-nrp.jpg" alt="College Board National Recognition Program School Recognition Award"></a><figcaption>College Board NRP, 2025</figcaption></figure>
+      <figure><a href="assets/cert-nhs.jpg"><img src="assets/cert-nhs.jpg" alt="National Honor Society certificate of membership"></a><figcaption>National Honor Society</figcaption></figure>
+      <figure><a href="assets/cert-pvsa.jpg"><img src="assets/cert-pvsa.jpg" alt="President’s Volunteer Service Award, Gold, 2024"></a><figcaption>President’s Volunteer Service Award, Gold</figcaption></figure>
+      <figure><a href="assets/cert-mayor.jpg"><img src="assets/cert-mayor.jpg" alt="Certificate of Appreciation from Mayor Mark J. Sokolich and the Borough Council"></a><figcaption>Fort Lee Mayor and Council, 2025</figcaption></figure>
+      <figure><a href="assets/cert-nshss.jpg"><img src="assets/cert-nshss.jpg" alt="National Society of High School Scholars membership certificate"></a><figcaption>National Society of High School Scholars</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="eyebrow">08 · Contact</div>
+    <div class="eyebrow">09 · Contact</div>
     <h2>Get in touch</h2>
     <dl>
       <dt>Email</dt><dd><a href="mailto:euni65cho@gmail.com">euni65cho@gmail.com</a></dd>
       <dt>Location</dt><dd>Fort Lee, New Jersey</dd>
-      <dt>SafeSteps For All</dt><dd><a href="https://apps.apple.com/us/app/safesteps-for-all/id6758502996">Apple App Store</a></dd>
+      <dt>SafeSteps For All</dt><dd><a href="https://apps.apple.com/us/app/safesteps-for-all/id6758502996">Apple App Store</a> · <a href="https://canva.link/safestepsforall">workshop slides</a> · <a href="https://drive.google.com/file/d/1NkqS2paJLrzMpYfZCu51obLLIG6JUcxs/view?usp=sharing">video walkthrough</a></dd>
+      <dt>Internship</dt><dd><a href="internship.html">The Center for Alcohol and Drug Resources</a></dd>
       <dt>Mo Soop</dt><dd><a href="https://mo-soop.glide.page">mo-soop.glide.page</a></dd>
       <dt>Accessible Science</dt><dd><a href="https://a.co/d/05Hk9cwB"><em>Accessible Science Student Anthology</em> on Amazon</a></dd>
       <dt>Research</dt><dd>NHSJS Reports link to be added at publication.</dd>
